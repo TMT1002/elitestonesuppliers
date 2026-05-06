@@ -24,22 +24,32 @@
   <style>
     /* -- Homepage-only styles -- */
 
-    /* Header floats over hero on homepage */
-    .site-header:not(.sticky) {
+    /* Top bar + header float over hero on homepage */
+    .top-bar {
       position: absolute;
       top: 0; left: 0; right: 0;
+      z-index: 10002;
+    }
+    .site-header:not(.sticky) {
+      position: absolute;
+      top: 37px; left: 0; right: 0;
+    }
+    @media (max-width: 767px) {
+      /* top-bar hidden on mobile, header starts from top */
+      .site-header:not(.sticky) { top: 0; }
     }
 
     /* HERO */
     .hero {
       position: relative;
-      min-height: 120vh;
+      height: 100vh;
+      min-height: 0;
       display: flex;
       flex-direction: column;
       overflow: hidden;
     }
-    @media (max-width: 975px) { .hero { min-height: 95vh; } }
-    @media (max-width: 575px) { .hero { height: 100svh; min-height: 0; } }
+    @media (max-width: 975px) { .hero { height: 95vh; } }
+    @media (max-width: 575px) { .hero { height: 100svh; } }
 
     .hero-slider { position: absolute; inset: 0; z-index: 0; }
     .hero-slide {
@@ -72,7 +82,7 @@
       flex-direction: column;
       align-items: flex-end;
       justify-content: flex-start;
-      padding: 140px 24px 0;
+      padding: 160px 24px 0;
       max-width: 960px;
       margin: 0 auto;
       width: 100%;
@@ -89,16 +99,16 @@
     }
 
     /* ICON BARS */
-    .icon-bars { position: absolute; bottom: 80px; left: 0; right: 0; z-index: 3; }
-    @media (max-width: 975px) { .icon-bars { bottom: 48px; } }
+    .icon-bars { position: absolute; bottom: 100px; left: 0; right: 0; z-index: 3; }
+    @media (max-width: 975px) { .icon-bars { bottom: 68px; } }
     @media (max-width: 575px) {
       .icon-bars { position: relative; bottom: auto; padding: 0 60px 60px; }
       .hero-body { justify-content: space-between; }
     }
     .icon-bars-inner {
       display: flex; flex-wrap: nowrap; align-items: stretch;
-      gap: 80px;
-      padding: 0 30px;
+      gap: 60px;
+      padding: 0 7.5%;
     }
     .icon-bar-item {
       flex: 1 1 0; min-width: 0; display: flex; flex-direction: row; align-items: center; justify-content: flex-start; gap: 16px;
