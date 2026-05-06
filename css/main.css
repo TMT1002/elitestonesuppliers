@@ -249,7 +249,7 @@ h4 { font-size: 24px; font-weight: 500; }
 
 /* Mobile fullscreen menu */
 .nav-mobile {
-  display: none;
+  display: flex;
   position: fixed;
   inset: 0;
   background: #111;
@@ -259,8 +259,11 @@ h4 { font-size: 24px; font-weight: 500; }
   justify-content: flex-start;
   text-align: center;
   overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform .35s cubic-bezier(.4,0,.2,1);
+  pointer-events: none;
 }
-.nav-mobile.open { display: flex; }
+.nav-mobile.open { transform: translateX(0); pointer-events: auto; }
 .nav-mobile-header {
   display: flex;
   align-items: center;
@@ -268,7 +271,7 @@ h4 { font-size: 24px; font-weight: 500; }
   padding: 20px 24px;
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
-.nav-mobile-logo { width: 120px; display: block; }
+.nav-mobile-logo { display: none; }
 .nav-mobile-close {
   background: none; border: none;
   font-size: 28px;

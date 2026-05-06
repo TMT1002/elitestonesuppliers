@@ -107,21 +107,36 @@
     .product-item img { width: 250px; display: block; margin: 0 auto; transition: transform .4s ease; }
     .product-item:hover img { transform: scale(1.04); }
     .product-name { margin-top: 10px; font-size: 18px; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; }
-    @media (max-width: 575px) { .product-item { width: 155px; margin: 10px; } .product-item img { width: 155px; } }
+    @media (max-width: 575px) { .products-grid { flex-direction: column; align-items: center; padding: 0 24px; } .product-item { width: 70%; margin: 10px 0; } .product-item img { width: 100%; } }
+    @media (max-width: 575px) {
+      .products-grid.fade-up { opacity: 1 !important; transform: none !important; }
+      .product-item { opacity: 0; transform: translateX(-60px); transition: opacity 0.9s ease, transform 0.9s ease; }
+      .product-item.slide-in { opacity: 1; transform: translateX(0); }
+      .product-item:first-child { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
 
     /* LOOKBOOK */
     .lookbook-section { padding: 80px 0 0; }
     .lookbook-section .section-title { margin-bottom: 8px; }
     .lookbook-sublabel { text-align: center; color: var(--secondary); font-size: 18px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 40px; }
-    .lookbook-layout { display: flex; align-items: stretch; }
-    .lookbook-bg { flex: 1 1 33.33%; min-height: 500px; background-size: cover; background-position: center; }
-    .lookbook-slider-wrap { flex: 1 1 33.33%; position: relative; overflow: hidden; min-height: 500px; }
+    .lookbook-layout { display: flex; align-items: stretch; gap: 2%; padding: 0 7.5%; }
+    .lookbook-bg { flex: 1 1 0; aspect-ratio: 3/4; min-height: 0; background-size: cover; background-position: center; }
+    .lookbook-slider-wrap { flex: 1 1 0; position: relative; overflow: hidden; aspect-ratio: 3/4; min-height: 0; }
     .lookbook-track { display: flex; height: 100%; transition: transform .8s cubic-bezier(.25,.46,.45,.94); }
-    .lookbook-slide { flex: 0 0 100%; background-size: cover; background-position: center; min-height: 500px; }
+    .lookbook-slide { flex: 0 0 100%; background-size: cover; background-position: center; min-height: 0; height: 100%; }
     .lookbook-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; display: flex; justify-content: space-between; padding: 0 12px; z-index: 5; }
     .lookbook-btn { background: var(--secondary); color: var(--white); border: none; width: 40px; height: 40px; cursor: pointer; font-size: 22px; display: flex; align-items: center; justify-content: center; transition: background .3s; }
     .lookbook-btn:hover { background: var(--primary); }
-    @media (max-width: 975px) { .lookbook-layout { flex-direction: column; } .lookbook-bg { min-height: 300px; } .lookbook-slider-wrap, .lookbook-slide { min-height: 300px; } }
+    @media (max-width: 975px) { .lookbook-layout { flex-direction: column; padding: 0 24px; } .lookbook-bg { aspect-ratio: 16/9; } .lookbook-slider-wrap, .lookbook-slide { aspect-ratio: 16/9; } }
+    @media (max-width: 767px) {
+      .lookbook-section { padding-bottom: 0; }
+      .lookbook-layout { flex-direction: column; gap: 10px; padding: 0 24px; }
+      .lookbook-bg { flex: none; width: 100%; aspect-ratio: 16/9; min-height: 0; background-size: cover; }
+      .lookbook-slider-wrap { flex: none; width: calc(100% - 80px); margin: 0 auto; aspect-ratio: 3/4; min-height: 0; }
+      .lookbook-track { width: 100%; height: 100%; }
+      .lookbook-slide { flex: 0 0 100%; min-height: 0; height: 100%; }
+      .lookbook-btn { display: none; }
+    }
 
     /* ABOUT */
     .about-section { overflow: hidden; background: var(--white); }
@@ -138,12 +153,13 @@
     @media (max-width: 860px) { .about-intro { flex-direction: column; gap: 32px; } .about-intro-img img { height: 260px; } }
 
     /* Stats strip */
-    .about-stats { display: flex; background: #1a1a1a; padding: 44px 24px; justify-content: center; gap: 0; flex-wrap: wrap; }
+    .about-stats { display: flex; background: #1a1a1a; padding: 44px 24px; justify-content: center; gap: 0; flex-wrap: wrap; margin: 0 7.5%; }
+    @media (max-width: 767px) { .about-stats { margin: 0 24px; border-radius: 0; } }
     .about-stat { flex: 1 1 160px; text-align: center; padding: 16px 24px; border-right: 1px solid rgba(255,255,255,.1); }
     .about-stat:last-child { border-right: none; }
     .about-stat-value { display: block; font-family: var(--serif); font-size: 36px; font-weight: 300; color: var(--accent); line-height: 1; margin-bottom: 8px; }
     .about-stat-label { display: block; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,.55); }
-    @media (max-width: 700px) { .about-stat { flex: 1 1 45%; border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); } .about-stat:last-child { border-bottom: none; } }
+    @media (max-width: 700px) { .about-stat { flex: 1 1 45%; border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); } .about-stat:last-child { border-bottom: none; } .about-stat-value { font-size: 26px; } .about-stat-label { font-size: 10px; letter-spacing: 1px; } .about-stat { padding: 12px 16px; } .about-stats { padding: 28px 16px; } }
 
     /* History: image + text */
     .about-history { display: flex; align-items: center; gap: 56px; padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
@@ -617,7 +633,40 @@
     }
     document.getElementById('lookbook-prev').addEventListener('click', function() { goToSlide(lbIdx - 1); });
     document.getElementById('lookbook-next').addEventListener('click', function() { goToSlide(lbIdx + 1); });
+
+    /* Touch swipe for lookbook slider */
+    (function() {
+      var startX = 0;
+      lbTrack.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+      lbTrack.addEventListener('touchend', function(e) {
+        var diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goToSlide(diff > 0 ? lbIdx + 1 : lbIdx - 1);
+      }, { passive: true });
+    })();
     setInterval(function() { goToSlide(lbIdx + 1); }, 5000);
+
+    /* Product items: slide-from-left on mobile scroll */
+    if (window.innerWidth <= 575 && 'IntersectionObserver' in window) {
+      var productItems = document.querySelectorAll('.product-item');
+      /* Item 1: always visible, no animation */
+      if (productItems[0]) {
+        productItems[0].style.opacity = '1';
+        productItems[0].style.transform = 'none';
+        productItems[0].style.transition = 'none';
+      }
+      var prodObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var idx = Array.prototype.indexOf.call(productItems, entry.target);
+            setTimeout(function() { entry.target.classList.add('slide-in'); }, (idx - 1) * 150);
+            prodObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      productItems.forEach(function(el, i) { if (i > 0) prodObserver.observe(el); });
+    } else {
+      document.querySelectorAll('.product-item').forEach(function(el) { el.style.opacity = '1'; el.style.transform = 'none'; });
+    }
 
     /* Hero title visible on load */
     document.getElementById('hero-title').classList.add('visible');
