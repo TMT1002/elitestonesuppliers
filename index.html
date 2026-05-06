@@ -24,6 +24,12 @@
   <style>
     /* -- Homepage-only styles -- */
 
+    /* Header floats over hero on homepage */
+    .site-header:not(.sticky) {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+    }
+
     /* HERO */
     .hero {
       position: relative;
@@ -33,7 +39,7 @@
       overflow: hidden;
     }
     @media (max-width: 975px) { .hero { min-height: 95vh; } }
-    @media (max-width: 575px) { .hero { min-height: 100vh; } }
+    @media (max-width: 575px) { .hero { height: 100svh; min-height: 0; } }
 
     .hero-slider { position: absolute; inset: 0; z-index: 0; }
     .hero-slide {
@@ -47,17 +53,26 @@
 
     .hero-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,.0) 50%, rgba(0,0,0,.35) 100%);
+      background: linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,.0) 50%, rgba(0,0,0,.5) 80%, rgba(0,0,0,.7) 100%);
       z-index: 1;
     }
-    .hero-body  { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 220px;
+      background: linear-gradient(to bottom, transparent, var(--bg));
+      z-index: 2;
+      pointer-events: none;
+    }
+    .hero-body  { position: relative; z-index: 3; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
     .hero-content {
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      justify-content: center;
-      padding: 60px 24px 60px;
+      justify-content: flex-start;
+      padding: 140px 24px 0;
       max-width: 960px;
       margin: 0 auto;
       width: 100%;
@@ -68,13 +83,17 @@
     .hero-subtitle h4 { color: var(--white); text-align: right; font-weight: 700; }
     @keyframes heroFadeIn { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }
     @media (max-width: 975px) { .hero-title { opacity: 1; } }
-    @media (max-width: 575px) { .hero-title { flex-basis: 100%; } .hero-content { padding: 110px 24px 60px; } }
+    @media (max-width: 575px) {
+      .hero-title { flex-basis: auto; }
+      .hero-content { flex: 0 0 auto; justify-content: flex-start; padding: 28svh 24px 0; }
+    }
 
     /* ICON BARS */
-    .icon-bars { position: absolute; bottom: 60px; left: 0; right: 0; z-index: 2; }
-    @media (max-width: 480px) {
-      .icon-bars { position: relative; bottom: auto; padding: 0 16px 32px; }
-      .hero-body { justify-content: flex-end; }
+    .icon-bars { position: absolute; bottom: 80px; left: 0; right: 0; z-index: 3; }
+    @media (max-width: 975px) { .icon-bars { bottom: 48px; } }
+    @media (max-width: 575px) {
+      .icon-bars { position: relative; bottom: auto; padding: 0 60px 60px; }
+      .hero-body { justify-content: space-between; }
     }
     .icon-bars-inner {
       display: flex; flex-wrap: nowrap; align-items: stretch;
@@ -96,7 +115,15 @@
     .icon-bar-text h4 { color: var(--white); font-size: 16px; font-weight: 700; line-height: 1.4; text-align: left; text-transform: uppercase; letter-spacing: .04em; }
     .icon-bar-text .sub { color: rgba(255,255,255,1); font-weight: 400; font-size: 12px; display: block; margin-top: 4px; letter-spacing: .02em; text-align: left; }
     @media (max-width: 767px) { .icon-bars-inner { flex-wrap: wrap; gap: 12px; } .icon-bar-item { flex: 1 1 calc(50% - 6px); } }
-    @media (max-width: 480px) { .icon-bars-inner { gap: 8px; } .icon-bar-item { flex: 1 1 100%; } }
+    @media (max-width: 575px) {
+      .icon-bars-inner { gap: 25px; padding: 0; }
+      .icon-bar-item { flex: 1 1 100%; padding: 10px 16px; gap: 14px; justify-content: center; }
+      .icon-bar-icon { width: 28px; height: 28px; }
+      .icon-bar-icon svg { width: 24px; height: 24px; }
+      .icon-bar-text { text-align: center; }
+      .icon-bar-text h4 { font-size: 15px; text-align: center; }
+      .icon-bar-text .sub { font-size: 12px; margin-top: 2px; text-align: center; }
+    }
 
     /* PRODUCTS */
     .products-section { background: var(--bg); }

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var mClose   = document.querySelector('.nav-mobile-close');
 
   if (toggle && mobile) {
-    toggle.addEventListener('click', function () { mobile.classList.add('open'); });
+    toggle.addEventListener('click', function () { mobile.classList.toggle('open'); });
     if (mClose) mClose.addEventListener('click', function () { mobile.classList.remove('open'); });
     mobile.querySelectorAll('a').forEach(function (a) {
       a.addEventListener('click', function () { mobile.classList.remove('open'); });

@@ -114,7 +114,7 @@ h4 { font-size: 24px; font-weight: 500; }
 
 .site-header {
   position: relative;
-  z-index: 200;
+  z-index: 10000;
   padding: 0 24px;
   background: #111;
   transition: box-shadow .3s;
@@ -131,7 +131,7 @@ h4 { font-size: 24px; font-weight: 500; }
   top: 0;
   background: #111;
   border-bottom: none;
-  z-index: 200;
+  z-index: 10000;
 }
 .site-header.solid.sticky {
   box-shadow: 0 2px 12px rgba(0,0,0,.4);
@@ -233,6 +233,8 @@ h4 { font-size: 24px; font-weight: 500; }
   background: none;
   border: none;
   padding: 4px;
+  position: relative;
+  z-index: 10001;
 }
 .nav-toggle span {
   display: block;
