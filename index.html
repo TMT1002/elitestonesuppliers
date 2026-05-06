@@ -1,0 +1,682 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Elite Natural Stone Solutions - ESS Marble</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Discover Elite Stone Suppliers for top-quality marble products, including countertops and tiles. Where elegance meets excellence!">
+  <meta name="keywords" content="elegant marble products, high-quality stone suppliers, marble countertops installation, premium flooring options, natural stone materials">
+  <meta property="og:title" content="Elite Natural Stone Solutions">
+  <meta property="og:description" content="Discover Elite Stone Suppliers for top-quality marble products, including countertops and tiles. Where elegance meets excellence!">
+  <meta property="og:url" content="https://elitestonesuppliers.com">
+  <meta property="og:image" content="/images/1200x630/19814166/logoess-OnWdSzciuU6v8G1owIZvcQ.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="/images/32x32/19814178/logoess-qdUXwDOnP4W3WIRFDMkRoQ-aeWFITUz7F4oV-2x4CbSjA.png">
+  <link rel="canonical" href="https://elitestonesuppliers.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=fallback" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- Google Tag -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17635959985"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','AW-17635959985');</script>
+
+  <style>
+    /* -- Homepage-only styles -- */
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 120vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    @media (max-width: 975px) { .hero { min-height: 95vh; } }
+    @media (max-width: 575px) { .hero { min-height: 100vh; } }
+
+    .hero-slider { position: absolute; inset: 0; z-index: 0; }
+    .hero-slide {
+      position: absolute; inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .hero-slide.active { opacity: 1; }
+
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,.0) 50%, rgba(0,0,0,.35) 100%);
+      z-index: 1;
+    }
+    .hero-body  { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; justify-content: space-between; }
+    .hero-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: center;
+      padding: 60px 24px 60px;
+      max-width: 960px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .hero-title { flex-basis: 80%; text-align: right; animation: heroFadeIn 1.5s ease forwards; }
+    .hero-title h1 { color: var(--white); text-align: right; }
+    .hero-subtitle { margin-top: 12px; text-align: right; }
+    .hero-subtitle h4 { color: var(--white); text-align: right; font-weight: 700; }
+    @keyframes heroFadeIn { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: none; } }
+    @media (max-width: 975px) { .hero-title { opacity: 1; } }
+    @media (max-width: 575px) { .hero-title { flex-basis: 100%; } .hero-content { padding: 110px 24px 60px; } }
+
+    /* ICON BARS */
+    .icon-bars { position: absolute; bottom: 60px; left: 0; right: 0; z-index: 2; }
+    @media (max-width: 480px) {
+      .icon-bars { position: relative; bottom: auto; padding: 0 16px 32px; }
+      .hero-body { justify-content: flex-end; }
+    }
+    .icon-bars-inner {
+      display: flex; flex-wrap: nowrap; align-items: stretch;
+      gap: 80px;
+      padding: 0 30px;
+    }
+    .icon-bar-item {
+      flex: 1 1 0; min-width: 0; display: flex; flex-direction: row; align-items: center; justify-content: flex-start; gap: 16px;
+      border: 2px solid rgba(255,255,255,.9);
+      padding: 10px 16px;
+      color: var(--white);
+      text-decoration: none;
+      text-align: left;
+    }
+    a.icon-bar-item:hover { color: var(--accent); }
+    a.icon-bar-item:hover .icon-bar-icon svg { fill: var(--accent); }
+    .icon-bar-icon { flex-shrink: 0; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; }
+    .icon-bar-icon svg { fill: #ffffff; width: 36px; height: 36px; overflow: hidden; transition: fill .3s; filter: drop-shadow(0 0 2px rgba(255,255,255,.5)); }
+    .icon-bar-text h4 { color: var(--white); font-size: 16px; font-weight: 700; line-height: 1.4; text-align: left; text-transform: uppercase; letter-spacing: .04em; }
+    .icon-bar-text .sub { color: rgba(255,255,255,1); font-weight: 400; font-size: 12px; display: block; margin-top: 4px; letter-spacing: .02em; text-align: left; }
+    @media (max-width: 767px) { .icon-bars-inner { flex-wrap: wrap; gap: 12px; } .icon-bar-item { flex: 1 1 calc(50% - 6px); } }
+    @media (max-width: 480px) { .icon-bars-inner { gap: 8px; } .icon-bar-item { flex: 1 1 100%; } }
+
+    /* PRODUCTS */
+    .products-section { background: var(--bg); }
+    .products-grid { display: flex; flex-wrap: wrap; justify-content: center; max-width: 960px; margin: 0 auto; padding: 0 12px; }
+    .product-item { width: 250px; margin: 20px; text-align: center; overflow: hidden; }
+    .product-item a { display: block; color: var(--text); }
+    .product-item a:hover { color: var(--secondary); }
+    .product-item img { width: 250px; display: block; margin: 0 auto; transition: transform .4s ease; }
+    .product-item:hover img { transform: scale(1.04); }
+    .product-name { margin-top: 10px; font-size: 18px; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; }
+    @media (max-width: 575px) { .product-item { width: 155px; margin: 10px; } .product-item img { width: 155px; } }
+
+    /* LOOKBOOK */
+    .lookbook-section { padding: 80px 0 0; }
+    .lookbook-section .section-title { margin-bottom: 8px; }
+    .lookbook-sublabel { text-align: center; color: var(--secondary); font-size: 18px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 40px; }
+    .lookbook-layout { display: flex; align-items: stretch; }
+    .lookbook-bg { flex: 1 1 33.33%; min-height: 500px; background-size: cover; background-position: center; }
+    .lookbook-slider-wrap { flex: 1 1 33.33%; position: relative; overflow: hidden; min-height: 500px; }
+    .lookbook-track { display: flex; height: 100%; transition: transform .8s cubic-bezier(.25,.46,.45,.94); }
+    .lookbook-slide { flex: 0 0 100%; background-size: cover; background-position: center; min-height: 500px; }
+    .lookbook-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 100%; display: flex; justify-content: space-between; padding: 0 12px; z-index: 5; }
+    .lookbook-btn { background: var(--secondary); color: var(--white); border: none; width: 40px; height: 40px; cursor: pointer; font-size: 22px; display: flex; align-items: center; justify-content: center; transition: background .3s; }
+    .lookbook-btn:hover { background: var(--primary); }
+    @media (max-width: 975px) { .lookbook-layout { flex-direction: column; } .lookbook-bg { min-height: 300px; } .lookbook-slider-wrap, .lookbook-slide { min-height: 300px; } }
+
+    /* ABOUT */
+    .about-section { overflow: hidden; background: var(--white); }
+    .about-header { text-align: center; padding: 64px 24px 40px; }
+    @media (max-width: 575px) { .about-header { padding: 32px 24px 24px; } }
+
+    /* Intro: text + image */
+    .about-intro { display: flex; align-items: center; gap: 56px; padding: 0 24px 64px; max-width: 1200px; margin: 0 auto; }
+    .about-intro-text { flex: 1 1 50%; }
+    .about-intro-subheading { font-family: var(--serif); font-size: 22px; font-weight: 300; color: var(--secondary); letter-spacing: .04em; margin-bottom: 16px; font-style: italic; }
+    .about-intro-text p { font-size: 16px; line-height: 1.85; color: var(--text); margin-bottom: 14px; }
+    .about-intro-img { flex: 1 1 50%; border-radius: 4px; overflow: hidden; }
+    .about-intro-img img { width: 100%; height: 380px; object-fit: cover; display: block; }
+    @media (max-width: 860px) { .about-intro { flex-direction: column; gap: 32px; } .about-intro-img img { height: 260px; } }
+
+    /* Stats strip */
+    .about-stats { display: flex; background: #1a1a1a; padding: 44px 24px; justify-content: center; gap: 0; flex-wrap: wrap; }
+    .about-stat { flex: 1 1 160px; text-align: center; padding: 16px 24px; border-right: 1px solid rgba(255,255,255,.1); }
+    .about-stat:last-child { border-right: none; }
+    .about-stat-value { display: block; font-family: var(--serif); font-size: 36px; font-weight: 300; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+    .about-stat-label { display: block; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,.55); }
+    @media (max-width: 700px) { .about-stat { flex: 1 1 45%; border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); } .about-stat:last-child { border-bottom: none; } }
+
+    /* History: image + text */
+    .about-history { display: flex; align-items: center; gap: 56px; padding: 80px 24px; max-width: 1200px; margin: 0 auto; }
+    .about-history-img { flex: 1 1 45%; border-radius: 4px; overflow: hidden; }
+    .about-history-img img { width: 100%; height: 340px; object-fit: cover; display: block; }
+    .about-history-text { flex: 1 1 55%; }
+    .about-block-title { font-family: var(--serif); font-size: 30px; font-weight: 400; color: var(--primary); margin-bottom: 16px; letter-spacing: .02em; }
+    .about-block-title::after { content: ''; display: block; width: 40px; height: 2px; background: var(--accent); margin-top: 10px; }
+    .about-history-text p { font-size: 16px; line-height: 1.85; color: var(--text); margin-bottom: 14px; }
+    @media (max-width: 860px) { .about-history { flex-direction: column; gap: 32px; } .about-history-img img { height: 240px; } }
+    @media (max-width: 575px) { .about-history { padding: 40px 24px; } }
+
+    /* Info cards */
+    .about-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; padding: 0 24px 80px; max-width: 1200px; margin: 0 auto; }
+    @media (max-width: 860px) { .about-cards { grid-template-columns: 1fr; } }
+    .about-card { background: var(--bg); border-radius: 4px; padding: 32px 28px; border-top: 3px solid var(--accent); transition: transform .35s ease, box-shadow .35s ease; }
+    .about-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,.10); }
+    .about-card-icon { font-size: 22px; color: var(--secondary); margin-bottom: 14px; }
+    .about-card-title { font-family: var(--serif); font-size: 22px; font-weight: 400; color: var(--primary); margin-bottom: 16px; }
+    .about-card-list { list-style: none; padding: 0; }
+    .about-card-list li { font-size: 15px; line-height: 1.7; color: var(--text); padding: 5px 0; border-bottom: 1px solid var(--border); }
+    .about-card-list li:last-child { border-bottom: none; }
+    .about-card-text { font-size: 15px; line-height: 1.8; color: var(--text); margin-bottom: 16px; }
+    .about-card-img { width: 100%; height: 140px; object-fit: cover; border-radius: 3px; display: block; }
+
+    /* Staggered children & image zoom */
+    .about-intro-img img, .about-history-img img { transition: transform .7s ease; }
+    .about-intro-img:hover img, .about-history-img:hover img { transform: scale(1.04); }
+    .about-stat { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .about-stats.counted .about-stat:nth-child(1) { opacity:1; transform:none; transition-delay:.0s; }
+    .about-stats.counted .about-stat:nth-child(2) { opacity:1; transform:none; transition-delay:.1s; }
+    .about-stats.counted .about-stat:nth-child(3) { opacity:1; transform:none; transition-delay:.2s; }
+    .about-stats.counted .about-stat:nth-child(4) { opacity:1; transform:none; transition-delay:.3s; }
+    .about-stats.counted .about-stat:nth-child(5) { opacity:1; transform:none; transition-delay:.4s; }
+    .about-card { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease, box-shadow .35s ease; }
+    .about-cards.in-view .about-card:nth-child(1) { opacity:1; transform:none; transition-delay:.0s; }
+    .about-cards.in-view .about-card:nth-child(2) { opacity:1; transform:none; transition-delay:.15s; }
+    .about-cards.in-view .about-card:nth-child(3) { opacity:1; transform:none; transition-delay:.3s; }
+    .about-cards.in-view .about-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(0,0,0,.10); }
+  </style>
+</head>
+
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <span>Premium Turkish Marble &amp; Quartz - Direct Importer - Commercial &amp; Residential</span>
+      <span class="top-bar-right">Trade Professionals &nbsp;|&nbsp; <a href="contact/index.html">Request a Quote</a> &nbsp;|&nbsp; +1 (702) 771-0883</span>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="site-header" id="site-header">
+    <div class="nav-inner">
+      <a href="./" class="nav-logo">
+        <img src="images/384/19814169/logoess-qdUXwDOnP4W3WIRFDMkRoQ.png" alt="Elite Stone Suppliers" width="173">
+        
+      </a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li class="nav-item">
+            <a href="products/index.html">Products <span class="caret">&#9660;</span></a>
+            <div class="nav-dropdown">
+              <a href="products/marble-slabs/index.html">Marble Slabs</a>
+              <a href="products/quartz-slabs/index.html">Quartz Slabs</a>
+              <a href="products/countertops/index.html">Countertops</a>
+              <a href="products/tiles-pavers/index.html">Tiles &amp; Pavers</a>
+              <a href="products/vanity-tops/index.html">Vanity Tops</a>
+            </div>
+          </li>
+          <li><a href="applications/index.html">Applications</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="mining/index.html">Mining</a></li>
+          <li><a href="catalogs/index.html">Catalogs</a></li>
+          <li><a href="contact/index.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="contact/index.html" class="nav-cta">Request a Quote</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="nav-mobile" id="nav-mobile" role="dialog" aria-modal="true" aria-label="Mobile menu">
+    <div class="nav-mobile-header">
+      <img src="images/384/19814169/logoess-qdUXwDOnP4W3WIRFDMkRoQ.png" alt="Elite Stone Suppliers" class="nav-mobile-logo">
+      <button class="nav-mobile-close" id="nav-mobile-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="nav-mobile-accent-bar"></div>
+    <div class="nav-mobile-links">
+      <a href="#" class="active">Home</a>
+      <a href="products/index.html">Products</a>
+      <a href="#about">About Us</a>
+      <a href="applications/index.html">Applications</a>
+      <a href="mining/index.html">Mining</a>
+      <a href="catalogs/index.html">Catalogs</a>
+      <a href="contact/index.html">Contact</a>
+    </div>
+    <div class="nav-mobile-footer">
+      <p>Contact Us</p>
+      <a href="tel:17027710883">+1 (702) 771-0883</a>
+      <a href="mailto:info@elitestonesuppliers.com">info@elitestonesuppliers.com</a>
+    </div>
+  </div>
+
+
+  <!-- HERO BANNER -->
+  <section class="hero" id="home">
+    <div class="hero-slider" aria-hidden="true">
+      <div class="hero-slide active" style="background-image:url('images/0/14090043/aa.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('images/0/14037645/ELITE_BIANCO_CARRARA1.png')"></div>
+      <div class="hero-slide" style="background-image:url('images/0/14090073/bb.jpg')"></div>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-body">
+      <div class="hero-content">
+        <div class="hero-title" id="hero-title">
+          <h1><strong>NATURAL<br>STONE</strong></h1>
+          <div class="hero-subtitle">
+            <h4><strong>HISTORY BEGINS WITH THE MOST VALUABLE NATURAL STONE</strong></h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="icon-bars">
+        <div class="icon-bars-inner">
+
+          <a href="mining/index.html" class="icon-bar-item">
+            <span class="icon-bar-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="202 -787 595 875" aria-hidden="true">
+                <path d="M480.7 66.2c-18.9-25.7-37.4-50.8-55.2-76.2C364.3-97 307.7-186.8 262-283.1c-22.4-47.3-43-95.5-53-147-18.9-96.6 3.5-183.4 68.9-257.3 63.1-71.1 143.9-103.7 238.7-99.8 132.3 5.5 247.8 105 274.7 235.1 11 53.4 7.4 105.6-9 157.6C749.4-291.1 697.9-197 639-106.8 596.9-42.4 551.1 19.6 506.9 82.6c-1.1 1.5-2.2 2.9-3.7 4.6-2.2 2.4-12.2-7-22.5-21zm164.8-551.8c3.9-75.3-58.6-145.5-133.3-149.6C426-640 359.2-580 354.6-493.3c-4 75.3 59.9 145.2 136.2 148.8 83.9 4 150.4-56.8 154.7-141.1z"/>
+              </svg>
+            </span>
+            <div class="icon-bar-text">
+              <h4><strong>Mine Location</strong><span class="sub">Distances of the Quarry to Ports</span></h4>
+            </div>
+          </a>
+
+          <div class="icon-bar-item">
+            <span class="icon-bar-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true">
+                <path d="M480 96V416H32V96H480zM32 64H0V96 416v32H32 480h32V416 96 64H480 32zM64 320v32H80h64 16V320H144 80 64zm128 0v32h16 64 16V320H272 208 192zM96 160H416v96H96V160zM64 128v32 96 32H96 416h32V256 160 128H416 96 64z"/>
+              </svg>
+            </span>
+            <div class="icon-bar-text">
+              <h4><strong>Media</strong><span class="sub">Mining &amp; Core Drilling &amp; Quarry</span></h4>
+            </div>
+          </div>
+
+          <div class="icon-bar-item">
+            <span class="icon-bar-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true">
+                <path d="M128 64c0-35.3 28.7-64 64-64H352V128c0 17.7 14.3 32 32 32H512V448c0 35.3-28.7 64-64 64H221.3c1.8-5.1 2.7-10.5 2.7-16V416c1.3-.5 2.5-1 3.8-1.5c6.8-3 14.3-7.8 20.6-15.5c6.4-7.9 10.1-17.2 11.4-27.1c.5-3.6.8-5.7 1.1-7.1c1.1-.9 2.8-2.3 5.6-4.5c19.9-15.4 27.1-42.2 17.5-65.5c-1.4-3.3-2.1-5.4-2.6-6.7c.5-1.4 1.2-3.4 2.6-6.7c9.5-23.3 2.4-50.1-17.5-65.5c-2.8-2.2-4.5-3.6-5.6-4.5c-.3-1.4-.6-3.6-1.1-7.1c-3.4-24.9-23-44.6-47.9-47.9c-3.6-.5-5.7-.8-7.1-1.1c-.9-1.1-2.3-2.8-4.5-5.6c-15.4-19.9-42.2-27.1-65.5-17.5c-2.6 1.1-5.1 2.3-6.6 3l-.1.1V64zm384 64H384V0L512 128zM192 288A64 64 0 1 0 64 288a64 64 0 1 0 128 0z"/>
+              </svg>
+            </span>
+            <div class="icon-bar-text">
+              <h4><strong>Our Quality Policy</strong><span class="sub">Always For The Best</span></h4>
+            </div>
+          </div>
+
+          <a href="catalogs/index.html" class="icon-bar-item">
+            <span class="icon-bar-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="117 -787 765 875" aria-hidden="true">
+                <path d="M828.1-787.5H171.9c-30.1 0-54.7 24.6-54.7 54.7V32.8c0 30.1 24.6 54.7 54.7 54.7h656.2c30.1 0 54.7-24.6 54.7-54.7v-765.6c0-30.1-24.6-54.7-54.7-54.7zM308.6-623.4h218.7c15.1 0 27.4 12.3 27.4 27.3 0 15.1-12.3 27.4-27.4 27.4H308.6c-15.1 0-27.3-12.3-27.3-27.4-.1-15 12.3-27.3 27.3-27.3zM691.5-76.6H308.6c-15.1 0-27.3-12.3-27.3-27.4 0-15 12.3-27.4 27.3-27.4h382.8c15.1 0 27.3 12.3 27.3 27.4 0 15.1-12.3 27.4-27.2 27.4zm0-164H308.6c-15.1 0-27.3-12.3-27.3-27.4 0-15 12.3-27.3 27.3-27.3h382.8c15.1 0 27.3 12.3 27.3 27.3.1 15-12.3 27.4-27.2 27.4zm0-164.1H308.6c-15.1 0-27.3-12.3-27.3-27.3 0-15.1 12.3-27.4 27.3-27.4h382.8c15.1 0 27.3 12.3 27.3 27.4.1 15-12.3 27.3-27.2 27.3z"/>
+              </svg>
+            </span>
+            <div class="icon-bar-text">
+              <h4><strong>ESS Marble and Quartz Catalogs</strong></h4>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- PRODUCTS -->
+  <section class="products-section section" id="products">
+    <div class="container">
+      <p class="section-label">Products</p>
+      <h1 class="section-title"><strong>Our Products</strong></h1>
+    </div>
+    <div class="products-grid fade-up">
+      <div class="product-item">
+        <a href="dark-star/index.html">
+          <img src="images/250/14041625/5430f1b00dcadd39fa32676c38ddd53c.jpg" alt="DARK STAR" loading="lazy" width="250">
+          <p class="product-name">DARK STAR</p>
+        </a>
+      </div>
+      <div class="product-item">
+        <a href="dark-star-polished/index.html">
+          <img src="images/250/14040818/1e172cec92f7674be1205f7960eede7f.jpg" alt="DARK STAR POLISHED" loading="lazy" width="250">
+          <p class="product-name">DARK STAR POLISHED</p>
+        </a>
+      </div>
+      <div class="product-item">
+        <a href="dark-star-12/index.html">
+          <img src="images/252/14041623/396dcd8704cb42c9bc9e475cd8cb5bc2.jpg" alt="DARK STAR HONED" loading="lazy" width="250">
+          <p class="product-name">DARK STAR HONED</p>
+        </a>
+      </div>
+      <div class="product-item">
+        <a href="sebaste-moire/index.html">
+          <img src="images/275/14041632/ec2f6281f4fc6df87cce70560fa009c1.jpg" alt="SEBASTE MOIRE" loading="lazy" width="250">
+          <p class="product-name">SEBASTE MOIRE</p>
+        </a>
+      </div>
+      <div class="product-item">
+        <a href="sebaste-flower/index.html">
+          <img src="images/245/14041614/2ba1b612a6d13dd80e1cbe360431e9d3.jpg" alt="SEBASTE FLOWER" loading="lazy" width="250">
+          <p class="product-name">SEBASTE FLOWER</p>
+        </a>
+      </div>
+      <div class="product-item">
+        <a href="sebaste-dark/index.html">
+          <img src="images/250/21795499/Rainfall--mi7jxJQ9-EEzKH1-Dmj_AA.jpg" alt="SEBASTE DARK" loading="lazy" width="250">
+          <p class="product-name">SEBASTE DARK</p>
+        </a>
+      </div>
+      <div class="product-item">
+        <a href="sebaste-dark-honed/index.html">
+          <img src="images/250/15681383/f3fcd375-4f9d-422b-b6d7-67d072070702-oH5EhHfhOAsiCbpMMId1qw.JPG" alt="SEBASTE DARK HONED" loading="lazy" width="250" style="object-fit:cover;height:333px;">
+          <p class="product-name">SEBASTE DARK HONED</p>
+        </a>
+      </div>
+      <div class="product-item">
+        <a href="river/index.html">
+          <img src="images/0/14041629/38637b8ff3c243697bc7cd781913ddd5.jpg" alt="RIVER" loading="lazy" width="250">
+          <p class="product-name">RIVER</p>
+        </a>
+      </div>
+      <div class="product-item">
+        <a href="river-bold/index.html">
+          <img src="images/250/14041615/3a62cb1ae7fdc0e5b2769697ce9569c5.jpg" alt="RIVER BOLD" loading="lazy" width="250">
+          <p class="product-name">RIVER BOLD</p>
+        </a>
+      </div>
+      <div class="product-item">
+        <a href="creama-dora/index.html">
+          <img src="images/391/21799887/706eb15c-7e1d-4b24-a60f-fb9a94d56f92-JDDtpsMO641C6IfQznmBKg.JPG" alt="CREAMA DORA" loading="lazy" width="250">
+          <p class="product-name">CREAMA DORA</p>
+        </a>
+      </div>
+      <div class="product-item">
+        <a href="creama-karaman/index.html">
+          <img src="images/250/21795545/IMG-20250817-WA0001-aaI0qIOawIB0009_GusfIg.jpg" alt="CREAMA KARAMAN" loading="lazy" width="250">
+          <p class="product-name">CREAMA KARAMAN</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- LOOKBOOK -->
+  <section class="lookbook-section" id="lookbook">
+    <div class="container">
+      <h3 class="section-title">Different Styles</h3>
+      <p class="lookbook-sublabel">Lookbook</p>
+    </div>
+    <div class="lookbook-layout">
+      <div class="lookbook-bg" style="background-image:url('images/1920/14475020/17fa88151560cdbe0d6c49e2205f9a26.jpeg')"></div>
+      <div class="lookbook-slider-wrap">
+        <div class="lookbook-track" id="lookbook-track">
+          <div class="lookbook-slide" style="background-image:url('images/0/14475392/88a016de1cb1ad3afd2675252933b29e.jpg')"></div>
+          <div class="lookbook-slide" style="background-image:url('images/0/14475360/0e9056622142dd7acd728606ee229a81.jpg')"></div>
+          <div class="lookbook-slide" style="background-image:url('images/0,768x331+0+346/14475473/ffb217f714abb25978c54083e8e356cd.jpg')"></div>
+          <div class="lookbook-slide" style="background-image:url('images/0,768x331+0+346/14475470/f6e5b67c6c41ad638f9435d26a11527c.jpg')"></div>
+          <div class="lookbook-slide" style="background-image:url('images/0,1200x518+0+78/14475467/f6d671b5734cbef19d86b19de4fabb22.jpg')"></div>
+          <div class="lookbook-slide" style="background-image:url('images/0,900x388+0+405/14475464/de314bca0af562954cc14c2c7f5eb4ba.jpg')"></div>
+          <div class="lookbook-slide" style="background-image:url('images/0,1200x518+0+78/14475425/a3049fb6feded397e29e7572747ecdfb.jpg')"></div>
+          <div class="lookbook-slide" style="background-image:url('images/0,1200x518+0+190/14475414/4150341ad814132c2dc0a80064b1cbb9.jpg')"></div>
+        </div>
+        <div class="lookbook-nav">
+          <button class="lookbook-btn" id="lookbook-prev" aria-label="Previous slide">&#8249;</button>
+          <button class="lookbook-btn" id="lookbook-next" aria-label="Next slide">&#8250;</button>
+        </div>
+      </div>
+      <div class="lookbook-bg" style="background-image:url('images/1920/14475035/9212fe17d2566bb1b134d28e26503dfe.jpeg')"></div>
+    </div>
+  </section>
+
+
+  <!-- ABOUT US -->
+  <section class="about-section section" id="about">
+    <div class="about-header fade-up">
+      <p class="section-label">About Us</p>
+      <h2 class="section-title">Elite Stone Suppliers LLC.</h2>
+    </div>
+
+    <!-- Intro -->
+    <div class="about-intro fade-up">
+      <div class="about-intro-text">
+        <p class="about-intro-subheading">International leader in natural stone since 2008</p>
+        <p>An international company and regional leader in the natural stone industry. Since its establishment in 2008, the company has expanded significantly, becoming a global model in the natural stone sector through innovation and technological leadership.</p>
+        <p>Core strengths include responsiveness, competitiveness, and continuous innovation. Located in Sivas, T&uuml;rkiye, ESS Marble operates with advanced production technologies to serve global markets with high-quality marble.</p>
+      </div>
+      <div class="about-intro-img">
+        <img src="images/1920/10967753/C.png" alt="ESS quarry in Sivas, T&uuml;rkiye" loading="lazy">
+      </div>
+    </div>
+
+    <!-- Stats strip -->
+    <div class="about-stats fade-up">
+      <div class="about-stat">
+        <span class="about-stat-value">2008</span>
+        <span class="about-stat-label">Year Founded</span>
+      </div>
+      <div class="about-stat">
+        <span class="about-stat-value">~2,550 m</span>
+        <span class="about-stat-label">Quarry Altitude</span>
+      </div>
+      <div class="about-stat">
+        <span class="about-stat-value">&minus;60&deg;C</span>
+        <span class="about-stat-label">Temp. Resistance</span>
+      </div>
+      <div class="about-stat">
+        <span class="about-stat-value">300 ha</span>
+        <span class="about-stat-label">Total Area</span>
+      </div>
+      <div class="about-stat">
+        <span class="about-stat-value">24+</span>
+        <span class="about-stat-label">Marble Color Variations</span>
+      </div>
+    </div>
+
+    <!-- History -->
+    <div class="about-history fade-up">
+      <div class="about-history-img">
+        <img src="images/0/14090043/aa.jpg" alt="ESS quarry extraction" loading="lazy">
+      </div>
+      <div class="about-history-text">
+        <h3 class="about-block-title">History</h3>
+        <p>Since 2008, ESS has extracted natural marble from quarries at approximately 2,500 meters altitude in Sivas, T&uuml;rkiye. The company exports block and slab marble globally and is used in major international construction projects.</p>
+        <p>The quarry contributes to regional economic development, employment, and sustainable business partnerships.</p>
+      </div>
+    </div>
+
+    <!-- Info cards -->
+    <div class="about-cards fade-up">
+      <div class="about-card">
+        <div class="about-card-icon">&#9650;</div>
+        <h4 class="about-card-title">Geographic Location &amp; Reserve</h4>
+        <ul class="about-card-list">
+          <li><strong>Elevation:</strong> ~2,550 m</li>
+          <li><strong>Temp. resistance:</strong> up to &minus;60&deg;C</li>
+          <li><strong>Total area:</strong> 300 hectares</li>
+          <li><strong>Depth:</strong> 1,000&ndash;1,200 m</li>
+          <li><strong>Estimated reserve:</strong> ~40 billion tons</li>
+          <li><strong>Color variations:</strong> 24+</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">&#9670;</div>
+        <h4 class="about-card-title">Marble Structure &amp; Geology</h4>
+        <ul class="about-card-list">
+          <li><strong>Density:</strong> ~2.7 g/cm&sup3;</li>
+          <li><strong>Hardness:</strong> 3.65 Mohs</li>
+          <li><strong>Structure:</strong> Compact, void-free limestone</li>
+          <li>Suitable for block and slab production with high durability and polish capability.</li>
+        </ul>
+      </div>
+      <div class="about-card">
+        <div class="about-card-icon">&#9675;</div>
+        <h4 class="about-card-title">Environmental Commitment</h4>
+        <p class="about-card-text">ESS uses certified materials and eco-friendly processes to ensure sustainability, safe indoor environments, and long-lasting product performance.</p>
+        <img src="images/605/14066963/bd64d81b956b4915b75cd0e07aeb36ad.jpg" alt="Eco-friendly stone process" loading="lazy" class="about-card-img">
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <!-- CTA BANNER -->
+  <section class="footer-cta">
+    <div class="footer-cta-inner">
+      <div class="footer-cta-text">
+        <h3>Have a Project in Mind?</h3>
+        <p>Our team is here to help bring your vision to life with premium stone and expert service.</p>
+      </div>
+      <div class="footer-cta-contact">
+        <span>+1 (702) 771-0883</span>
+        <span class="footer-cta-sep">|</span>
+        <span>info@elitestonesuppliers.com</span><span class="footer-cta-sep">|</span><span>sales@elitestonesupplers.com</span>
+      </div>
+      <a href="contact/index.html" class="footer-cta-btn">Start Your Project</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <img src="images/273/19814169/logoess-qdUXwDOnP4W3WIRFDMkRoQ.png" alt="Elite Stone Suppliers" loading="lazy" width="160">
+        </div>
+        <p>Direct importer of premium Turkish marble and quartz. Serving commercial and residential projects across the Midwest with quality, value, and integrity.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Products</h4>
+        <ul class="footer-links-list">
+          <li><a href="products/marble-slabs/index.html">Marble Slabs</a></li>
+          <li><a href="products/quartz-slabs/index.html">Quartz Slabs</a></li>
+          <li><a href="products/countertops/index.html">Countertops</a></li>
+          <li><a href="products/tiles-pavers/index.html">Tiles &amp; Pavers</a></li>
+          <li><a href="products/vanity-tops/index.html">Vanity Tops</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Applications</h4>
+        <ul class="footer-links-list">
+          <li><a href="applications/index.html">Commercial</a></li>
+          <li><a href="applications/index.html">Multifamily</a></li>
+          <li><a href="applications/index.html">Hospitality</a></li>
+          <li><a href="applications/index.html">Residential</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Resources</h4>
+        <ul class="footer-links-list">
+          <li><a href="catalogs/index.html">Catalogs</a></li>
+          <li><a href="#">Care &amp; Maintenance</a></li>
+          <li><a href="#">Installation Guide</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">Contact Us</h4>
+        <ul class="footer-links-list footer-contact-list">
+          <li>1050 Pauly Dr, Elk Grove Village, IL 60007</li>
+          <li><a href="tel:17027710883">+1 (702) 771-0883</a></li>
+          <li><a href="mailto:info@elitestonesuppliers.com">info@elitestonesuppliers.com</a></li><li><a href="mailto:sales@elitestonesupplers.com">sales@elitestonesupplers.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Elite Stone Suppliers LLC. All Rights Reserved.</p>
+      <div class="footer-legal">
+        <a href="legal-notice/index.html">Legal Notice</a>
+        <span>|</span>
+        <a href="privacy/index.html">Privacy Policy</a>
+        <span>|</span>
+        <a href="#">Terms of Use</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+  <script>
+    /* Hero slider */
+    var heroSlides = document.querySelectorAll('.hero-slide');
+    var heroIdx = 0;
+    setInterval(function() {
+      heroSlides[heroIdx].classList.remove('active');
+      heroIdx = (heroIdx + 1) % heroSlides.length;
+      heroSlides[heroIdx].classList.add('active');
+    }, 5000);
+
+    /* Lookbook slider */
+    var lbTrack = document.getElementById('lookbook-track');
+    var lbTotal = lbTrack.querySelectorAll('.lookbook-slide').length;
+    var lbIdx = 0;
+    function goToSlide(idx) {
+      lbIdx = (idx + lbTotal) % lbTotal;
+      lbTrack.style.transform = 'translateX(-' + (lbIdx * 100) + '%)';
+    }
+    document.getElementById('lookbook-prev').addEventListener('click', function() { goToSlide(lbIdx - 1); });
+    document.getElementById('lookbook-next').addEventListener('click', function() { goToSlide(lbIdx + 1); });
+    setInterval(function() { goToSlide(lbIdx + 1); }, 5000);
+
+    /* Hero title visible on load */
+    document.getElementById('hero-title').classList.add('visible');
+
+    /* About stats: count-up + stagger */
+    (function() {
+      var statsEl = document.querySelector('.about-stats');
+      if (!statsEl) return;
+      var triggered = false;
+      function parseNum(str) { return parseFloat(str.replace(/[^0-9.]/g, '')) || 0; }
+      function countUp(el, from, to, duration, suffix, prefix) {
+        var start = null;
+        var isFloat = (to % 1 !== 0);
+        function step(ts) {
+          if (!start) start = ts;
+          var progress = Math.min((ts - start) / duration, 1);
+          var ease = 1 - Math.pow(1 - progress, 3);
+          var cur = from + (to - from) * ease;
+          el.textContent = (prefix||'') + (isFloat ? cur.toFixed(1) : Math.floor(cur)) + (suffix||'');
+          if (progress < 1) requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      }
+      var observer2 = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting && !triggered) {
+          triggered = true;
+          statsEl.classList.add('counted');
+          var configs = [
+            { suffix: '', prefix: '' },
+            { suffix: ' m', prefix: '~', num: 2550 },
+            { suffix: '\u00B0C', prefix: '\u22126', num: 60 },
+            { suffix: ' ha', prefix: '', num: 300 },
+            { suffix: '+', prefix: '', num: 24 }
+          ];
+          statsEl.querySelectorAll('.about-stat-value').forEach(function(el, i) {
+            if (i === 0) { el.textContent = '2008'; return; }
+            var c = configs[i];
+            countUp(el, 0, c.num, 1200, c.suffix, c.prefix);
+          });
+        }
+      }, { threshold: 0.3 });
+      observer2.observe(statsEl);
+
+      /* About cards stagger */
+      var cardsEl = document.querySelector('.about-cards');
+      if (cardsEl) {
+        var obs3 = new IntersectionObserver(function(entries) {
+          if (entries[0].isIntersecting) { cardsEl.classList.add('in-view'); obs3.disconnect(); }
+        }, { threshold: 0.15 });
+        obs3.observe(cardsEl);
+      }
+    })();
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
