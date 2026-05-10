@@ -155,7 +155,7 @@ h4 { font-size: 24px; font-weight: 500; }
   line-height: 1.4;
   text-transform: uppercase;
 }
-@media (max-width: 575px) { .nav-logo img { width: 110px; } }
+@media (max-width: 575px) { .nav-logo img { width: 170px; } }
 
 .nav-links {
   list-style: none;
@@ -913,16 +913,20 @@ h4 { font-size: 24px; font-weight: 500; }
 }
 .pdp-subtitle {
   font-family: var(--serif);
-  font-style: italic;
-  font-size: 20px;
-  color: var(--btn-bg);
-  margin-bottom: 22px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: 0.03em;
+  color: #8b6f47;
+  margin-bottom: 24px;
   text-transform: none;
 }
 .pdp-desc {
-  font-size: 15px;
-  line-height: 1.85;
-  color: #555;
+  font-family: var(--sans);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #222;
   text-transform: none;
   margin-bottom: 30px;
 }

@@ -102,7 +102,7 @@
     .icon-bars { position: absolute; bottom: 100px; left: 0; right: 0; z-index: 3; }
     @media (max-width: 975px) { .icon-bars { bottom: 68px; } }
     @media (max-width: 575px) {
-      .icon-bars { position: relative; bottom: auto; padding: 0 60px 60px; }
+      .icon-bars { position: relative; bottom: auto; padding: 0 35px 60px; }
       .hero-body { justify-content: space-between; }
     }
     .icon-bars-inner {
@@ -122,17 +122,22 @@
     a.icon-bar-item:hover .icon-bar-icon svg { fill: var(--accent); }
     .icon-bar-icon { flex-shrink: 0; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; }
     .icon-bar-icon svg { fill: #ffffff; width: 36px; height: 36px; overflow: hidden; transition: fill .3s; filter: drop-shadow(0 0 2px rgba(255,255,255,.5)); }
-    .icon-bar-text h4 { color: var(--white); font-size: 16px; font-weight: 700; line-height: 1.4; text-align: left; text-transform: uppercase; letter-spacing: .04em; }
-    .icon-bar-text .sub { color: rgba(255,255,255,1); font-weight: 400; font-size: 12px; display: block; margin-top: 4px; letter-spacing: .02em; text-align: left; }
+    .icon-bar-text h4 { color: var(--white); font-size: 18px; font-weight: 800; line-height: 1.4; text-align: left; text-transform: uppercase; letter-spacing: .04em; }
+    .icon-bar-text .sub { color: rgba(255,255,255,1); font-weight: 600; font-size: 13px; display: block; margin-top: 4px; letter-spacing: .02em; text-align: left; }
     @media (max-width: 767px) { .icon-bars-inner { flex-wrap: wrap; gap: 12px; } .icon-bar-item { flex: 1 1 calc(50% - 6px); } }
     @media (max-width: 575px) {
-      .icon-bars-inner { gap: 25px; padding: 0; }
-      .icon-bar-item { flex: 1 1 100%; padding: 10px 16px; gap: 14px; justify-content: center; }
+      .icon-bars-inner { gap: 14px; padding: 0; }
+      .icon-bar-item {
+        flex: 1 1 100%; padding: 12px 20px; gap: 14px; justify-content: center;
+        background: rgba(0,0,0,.45);
+        border: 2px solid rgba(255,255,255,1);
+        backdrop-filter: blur(4px);
+      }
       .icon-bar-icon { width: 28px; height: 28px; }
       .icon-bar-icon svg { width: 24px; height: 24px; }
       .icon-bar-text { text-align: center; }
-      .icon-bar-text h4 { font-size: 15px; text-align: center; }
-      .icon-bar-text .sub { font-size: 12px; margin-top: 2px; text-align: center; }
+      .icon-bar-text h4 { font-size: 17px; font-weight: 800; text-align: center; text-shadow: 0 1px 6px rgba(0,0,0,.9); }
+      .icon-bar-text .sub { font-size: 13px; font-weight: 600; margin-top: 2px; text-align: center; text-shadow: 0 1px 4px rgba(0,0,0,.9); }
     }
 
     /* PRODUCTS */
