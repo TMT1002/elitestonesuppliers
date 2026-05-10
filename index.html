@@ -142,14 +142,15 @@
 
     /* PRODUCTS */
     .products-section { background: var(--bg); }
-    .products-grid { display: flex; flex-wrap: wrap; justify-content: center; max-width: 960px; margin: 0 auto; padding: 0 12px; }
-    .product-item { width: 250px; margin: 20px; text-align: center; overflow: hidden; }
+    .products-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 36px 28px; max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+    .product-item { min-width: 0; text-align: center; overflow: hidden; }
     .product-item a { display: block; color: var(--text); }
     .product-item a:hover { color: var(--secondary); }
-    .product-item img { width: 250px; display: block; margin: 0 auto; transition: transform .4s ease; }
+    .product-item img { width: 100%; height: 300px; object-fit: cover; display: block; transition: transform .4s ease; }
     .product-item:hover img { transform: scale(1.04); }
     .product-name { margin-top: 10px; font-size: 18px; font-weight: 400; text-transform: uppercase; letter-spacing: 1px; }
-    @media (max-width: 575px) { .products-grid { flex-direction: column; align-items: center; padding: 0 24px; } .product-item { width: 70%; margin: 10px 0; } .product-item img { width: 100%; } }
+    @media (max-width: 975px) { .products-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 0 24px; } }
+    @media (max-width: 575px) { .products-grid { grid-template-columns: 1fr; padding: 0 24px; } .product-item { width: 70%; margin: 10px auto; } .product-item img { width: 100%; height: auto; } }
     @media (max-width: 575px) {
       .products-grid.fade-up { opacity: 1 !important; transform: none !important; }
       .product-item { opacity: 0; transform: translateX(-60px); transition: opacity 0.9s ease, transform 0.9s ease; }
@@ -393,67 +394,67 @@
     <div class="products-grid fade-up">
       <div class="product-item">
         <a href="dark-star/index.html">
-          <img src="images/250/14041625/5430f1b00dcadd39fa32676c38ddd53c.jpg" alt="DARK STAR" loading="lazy" width="250">
+          <img src="images/250/14041625/5430f1b00dcadd39fa32676c38ddd53c.jpg" alt="DARK STAR" loading="lazy">
           <p class="product-name">DARK STAR</p>
         </a>
       </div>
       <div class="product-item">
         <a href="dark-star-polished/index.html">
-          <img src="images/250/14040818/1e172cec92f7674be1205f7960eede7f.jpg" alt="DARK STAR POLISHED" loading="lazy" width="250">
+          <img src="images/250/14040818/1e172cec92f7674be1205f7960eede7f.jpg" alt="DARK STAR POLISHED" loading="lazy">
           <p class="product-name">DARK STAR POLISHED</p>
         </a>
       </div>
       <div class="product-item">
         <a href="dark-star-12/index.html">
-          <img src="images/252/14041623/396dcd8704cb42c9bc9e475cd8cb5bc2.jpg" alt="DARK STAR HONED" loading="lazy" width="250">
+          <img src="images/252/14041623/396dcd8704cb42c9bc9e475cd8cb5bc2.jpg" alt="DARK STAR HONED" loading="lazy">
           <p class="product-name">DARK STAR HONED</p>
         </a>
       </div>
       <div class="product-item">
         <a href="sebaste-moire/index.html">
-          <img src="images/275/14041632/ec2f6281f4fc6df87cce70560fa009c1.jpg" alt="SEBASTE MOIRE" loading="lazy" width="250">
+          <img src="images/275/14041632/ec2f6281f4fc6df87cce70560fa009c1.jpg" alt="SEBASTE MOIRE" loading="lazy">
           <p class="product-name">SEBASTE MOIRE</p>
         </a>
       </div>
       <div class="product-item">
         <a href="sebaste-flower/index.html">
-          <img src="images/245/14041614/2ba1b612a6d13dd80e1cbe360431e9d3.jpg" alt="SEBASTE FLOWER" loading="lazy" width="250">
+          <img src="images/245/14041614/2ba1b612a6d13dd80e1cbe360431e9d3.jpg" alt="SEBASTE FLOWER" loading="lazy">
           <p class="product-name">SEBASTE FLOWER</p>
         </a>
       </div>
       <div class="product-item">
         <a href="sebaste-dark/index.html">
-          <img src="images/250/21795499/Rainfall--mi7jxJQ9-EEzKH1-Dmj_AA.jpg" alt="SEBASTE DARK" loading="lazy" width="250">
+          <img src="images/250/21795499/Rainfall--mi7jxJQ9-EEzKH1-Dmj_AA.jpg" alt="SEBASTE DARK" loading="lazy">
           <p class="product-name">SEBASTE DARK</p>
         </a>
       </div>
       <div class="product-item">
         <a href="sebaste-dark-honed/index.html">
-          <img src="images/250/15681383/f3fcd375-4f9d-422b-b6d7-67d072070702-oH5EhHfhOAsiCbpMMId1qw.JPG" alt="SEBASTE DARK HONED" loading="lazy" width="250" style="object-fit:cover;height:333px;">
+          <img src="images/250/15681383/f3fcd375-4f9d-422b-b6d7-67d072070702-oH5EhHfhOAsiCbpMMId1qw.JPG" alt="SEBASTE DARK HONED" loading="lazy">
           <p class="product-name">SEBASTE DARK HONED</p>
         </a>
       </div>
       <div class="product-item">
         <a href="river/index.html">
-          <img src="images/0/14041629/38637b8ff3c243697bc7cd781913ddd5.jpg" alt="RIVER" loading="lazy" width="250">
+          <img src="images/0/14041629/38637b8ff3c243697bc7cd781913ddd5.jpg" alt="RIVER" loading="lazy">
           <p class="product-name">RIVER</p>
         </a>
       </div>
       <div class="product-item">
         <a href="river-bold/index.html">
-          <img src="images/250/14041615/3a62cb1ae7fdc0e5b2769697ce9569c5.jpg" alt="RIVER BOLD" loading="lazy" width="250">
+          <img src="images/250/14041615/3a62cb1ae7fdc0e5b2769697ce9569c5.jpg" alt="RIVER BOLD" loading="lazy">
           <p class="product-name">RIVER BOLD</p>
         </a>
       </div>
       <div class="product-item">
         <a href="creama-dora/index.html">
-          <img src="images/391/21799887/706eb15c-7e1d-4b24-a60f-fb9a94d56f92-JDDtpsMO641C6IfQznmBKg.JPG" alt="CREAMA DORA" loading="lazy" width="250">
+          <img src="images/391/21799887/706eb15c-7e1d-4b24-a60f-fb9a94d56f92-JDDtpsMO641C6IfQznmBKg.JPG" alt="CREAMA DORA" loading="lazy">
           <p class="product-name">CREAMA DORA</p>
         </a>
       </div>
       <div class="product-item">
         <a href="creama-karaman/index.html">
-          <img src="images/250/21795545/IMG-20250817-WA0001-aaI0qIOawIB0009_GusfIg.jpg" alt="CREAMA KARAMAN" loading="lazy" width="250">
+          <img src="images/250/21795545/IMG-20250817-WA0001-aaI0qIOawIB0009_GusfIg.jpg" alt="CREAMA KARAMAN" loading="lazy">
           <p class="product-name">CREAMA KARAMAN</p>
         </a>
       </div>
