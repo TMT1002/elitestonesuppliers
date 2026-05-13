@@ -88,11 +88,15 @@
 
       <!-- LEFT: gallery -->
       <div class="pdp-gallery">
-        <div class="pdp-main-img-wrap" style="width:100%;aspect-ratio:1;background:#e8e5e0;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;color:#b0a898;">
-          <span style="font-size:48px;">&#128247;</span>
-          <span style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;">Image Coming Soon</span>
+        <div class="pdp-main-img-wrap">
+          <img src="../newimages/SagaBlack/SagaBlack1.jpeg" id="pdp-main-img" class="pdp-main-img" alt="Saga Black marble slab">
+          <button class="pdp-zoom-btn" aria-label="Zoom image">&#128269;</button>
         </div>
-        <div class="pdp-thumbs"></div>
+        <div class="pdp-thumbs">
+          <img src="../newimages/SagaBlack/SagaBlack1.jpeg" class="pdp-thumb active" alt="Saga Black view 1" onclick="pdpSwap(this)">
+          <img src="../newimages/SagaBlack/SagaBlack2.png" class="pdp-thumb" alt="Saga Black view 2" onclick="pdpSwap(this)">
+          <img src="../newimages/SagaBlack/SagaBlack3.png" class="pdp-thumb" alt="Saga Black view 3" onclick="pdpSwap(this)">
+        </div>
       </div>
 
       <!-- RIGHT: info -->
@@ -164,10 +168,9 @@
     <div class="pdp-projects-section">
       <h3>See Saga Black in Real Projects</h3>
       <div class="pdp-projects-grid">
-        <div style="background:#e8e5e0;aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:#b0a898;font-size:11px;letter-spacing:.1em;text-transform:uppercase;">Coming Soon</div>
-        <div style="background:#e8e5e0;aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:#b0a898;font-size:11px;letter-spacing:.1em;text-transform:uppercase;">Coming Soon</div>
-        <div style="background:#e8e5e0;aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:#b0a898;font-size:11px;letter-spacing:.1em;text-transform:uppercase;">Coming Soon</div>
-        <div style="background:#e8e5e0;aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:#b0a898;font-size:11px;letter-spacing:.1em;text-transform:uppercase;">Coming Soon</div>
+        <a href="../applications/index.html"><img src="../newimages/SagaBlack/SagaBlack1.jpeg" alt="Saga Black project 1" loading="lazy"></a>
+        <a href="../applications/index.html"><img src="../newimages/SagaBlack/SagaBlack2.png" alt="Saga Black project 2" loading="lazy"></a>
+        <a href="../applications/index.html"><img src="../newimages/SagaBlack/SagaBlack3.png" alt="Saga Black project 3" loading="lazy"></a>
       </div>
       <div class="pdp-projects-cta">
         <a href="../applications/index.html" class="pdp-projects-btn">View More Projects</a>
