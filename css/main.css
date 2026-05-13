@@ -818,6 +818,9 @@ h4 { font-size: 24px; font-weight: 500; }
 
 /* breadcrumb bar */
 .pdp-breadcrumb-bar {
+  position: sticky;
+  top: 80px;
+  z-index: 999;
   background: #f9f8f6;
   border-bottom: 1px solid var(--border);
   padding: 14px 0;
@@ -826,7 +829,7 @@ h4 { font-size: 24px; font-weight: 500; }
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
-  font-size: 13px;
+  font-size: 15px;
   color: #999;
   text-transform: none;
 }
@@ -861,6 +864,20 @@ h4 { font-size: 24px; font-weight: 500; }
   transition: transform .4s ease;
 }
 .pdp-main-img-wrap:hover .pdp-main-img { transform: scale(1.03); }
+.pdp-img-breadcrumb {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  padding: 14px 16px 28px;
+  background: linear-gradient(to bottom, rgba(0,0,0,.55) 0%, transparent 100%);
+  font-size: 12px;
+  color: rgba(255,255,255,.8);
+  letter-spacing: .04em;
+  z-index: 2;
+  pointer-events: none;
+}
+.pdp-img-breadcrumb a { color: rgba(255,255,255,.7); pointer-events: all; }
+.pdp-img-breadcrumb a:hover { color: #fff; }
+.pdp-img-breadcrumb .sep { margin: 0 7px; color: rgba(255,255,255,.4); }
 .pdp-zoom-btn {
   position: absolute;
   top: 14px;
