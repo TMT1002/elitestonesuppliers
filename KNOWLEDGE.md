@@ -48,10 +48,24 @@ convert/
 ├─ sebaste-dark/index.html
 ├─ sebaste-dark-honed/index.html
 ├─ sebaste-flower/index.html
-└─ sebaste-moire/index.html      # Các product detail page kiểu PDP
+├─ sebaste-moire/index.html      # Các product detail page kiểu PDP (Natural Marble)
+│
+│  ── Empirestone Quartz PDPs ──
+├─ sonata/index.html             # PP681
+├─ vivaldi/index.html            # PP682
+├─ vivara/index.html             # PP701
+├─ taj-mahal/index.html          # PP710
+├─ misterio-white/index.html     # PQ115
+├─ misterio-gold/index.html      # PQ117
+├─ nero-marquina/index.html      # PQ120
+├─ rio-calacatta/index.html      # PQ134
+├─ avenza-brown/index.html       # PQ158
+└─ blanc-gold/index.html         # PQ197
 ```
 
-Hiện có **27 trang HTML** trong cây `convert`.
+Hiện có **37 trang HTML** trong cây `convert`.
+
+Ảnh sản phẩm Empirestone Quartz lưu tại: `images/quartz/{slug}/`
 
 ## 3. Kiến trúc route
 
@@ -221,12 +235,13 @@ Nếu các dịch vụ này đổi URL hoặc quyền truy cập, site có thể
 
 ## 9. Các điểm cần lưu ý khi bảo trì
 
-### 9.1. Nội dung placeholder / dummy
-Một số PDP đang có nội dung placeholder như:
-- `Download Spec Sheet (dummy)`
-- Thông số `Thickness`, `Slab Size`, `Maintenance`, `Stock Availability` có gắn `(dummy)`
+### 9.1. Nội dung chưa xác nhận ("Coming Soon")
+Các PDP có một số trường thông số kỹ thuật chưa được xác nhận. Chính sách hiện tại:
+- `Download Spec Sheet` button: giữ nhãn `(coming soon)` cho đến khi PDF thực sự sẵn sàng.
+- Các trường `Thickness`, `Slab Size`, `Maintenance`, `Stock Availability`: hiển thị `Coming Soon` khi chưa có dữ liệu thực.
+- Các trường còn lại (`Origin`, `Material Type`, `Finish`, `Color`, `Application`, `Variation`, `Recommended Use`) **bắt buộc** phải có giá trị thực trước khi publish.
 
-Điều này cho thấy dữ liệu sản phẩm chưa hoàn thiện 100%.
+**Xem quy tắc đầy đủ tại:** [`CONTENT-RULES.md`](./CONTENT-RULES.md)
 
 ### 9.2. Contact form chưa có backend
 Form ở `contact/index.html` chỉ chặn captcha phía client và chưa submit đi đâu.
