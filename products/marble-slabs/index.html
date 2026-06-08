@@ -11,26 +11,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=fallback" rel="stylesheet">
   <link rel="stylesheet" href="../../css/main.css">
   <style>
-    .cat-hero { background: #111; padding: 20px 24px 48px; text-align: center; border-bottom: 2px solid var(--accent); }
+    .cat-hero { background: #111; padding: 20px 24px 36px; text-align: center; border-bottom: 2px solid var(--accent); }
     .cat-hero .breadcrumb { font-size: 13px; color: rgba(255,255,255,.45); margin-bottom: 16px; letter-spacing: .04em; }
     .cat-hero .breadcrumb a { color: rgba(255,255,255,.45); }
     .cat-hero .breadcrumb a:hover { color: var(--accent); }
     .cat-hero .breadcrumb span { margin: 0 8px; }
-    .cat-hero h1 { color: #fff; font-size: clamp(28px, 5vw, 48px); font-weight: 800; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 12px; }
+    .cat-hero h1 { color: #fff; font-size: clamp(22px, 4vw, 36px); font-weight: 800; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 12px; }
     .cat-hero p { color: rgba(255,255,255,.6); font-size: 16px; max-width: 560px; margin: 0 auto; }
     .cat-filters { display: flex; justify-content: center; gap: 12px; padding: 32px 24px 0; flex-wrap: wrap; }
     .cat-filter-btn { padding: 8px 20px; border: 1px solid var(--border); background: none; font-size: 13px; font-family: var(--sans); letter-spacing: .06em; text-transform: uppercase; cursor: pointer; transition: all .2s; color: var(--text); }
     .cat-filter-btn.active, .cat-filter-btn:hover { background: var(--accent); border-color: var(--accent); color: #111; font-weight: 700; }
-    .cat-grid-section { padding: 48px 24px 80px; max-width: 1100px; margin: 0 auto; }
-    .cat-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; }
-    .cat-card { width: 280px; text-align: center; overflow: hidden; }
+    .cat-grid-section { padding: 48px 24px 80px; max-width: 1200px; margin: 0 auto; }
+    .cat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .cat-card { text-align: center; overflow: hidden; }
     .cat-card a { display: block; color: var(--text); }
     .cat-card a:hover { color: var(--secondary); }
-    .cat-card-img { width: 100%; height: 320px; object-fit: cover; display: block; transition: transform .4s ease; }
+    .cat-card-img { width: 100%; height: 260px; object-fit: cover; display: block; transition: transform .4s ease; }
     .cat-card:hover .cat-card-img { transform: scale(1.04); }
-    .cat-card-name { margin-top: 14px; font-size: 16px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
-    .cat-card-tag { display: inline-block; margin-top: 6px; font-size: 11px; color: var(--secondary); letter-spacing: .08em; text-transform: uppercase; }
-    @media (max-width: 600px) { .cat-card { width: 160px; } .cat-card-img { height: 200px; } }
+    .cat-card-name { margin-top: 12px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
+    .cat-card-tag { display: inline-block; margin-top: 5px; font-size: 11px; color: var(--secondary); letter-spacing: .08em; text-transform: uppercase; }
+    @media (max-width: 900px) { .cat-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 600px) { .cat-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } .cat-card-img { height: 180px; } }
   </style>
 </head>
 <body>
@@ -57,9 +58,6 @@
             <div class="nav-dropdown">
               <a href="../../products/marble-slabs/index.html">Marble Slabs</a>
               <a href="../../products/quartz-slabs/index.html">Quartz Slabs</a>
-              <a href="../../products/countertops/index.html">Countertops</a>
-              <a href="../../products/tiles-pavers/index.html">Tiles &amp; Pavers</a>
-              <a href="../../products/vanity-tops/index.html">Vanity Tops</a>
             </div>
           </li>
           <li><a href="../../applications/index.html">Applications</a></li>
@@ -256,18 +254,6 @@
         <ul class="footer-links-list">
           <li><a href="../../products/marble-slabs/index.html">Marble Slabs</a></li>
           <li><a href="../../products/quartz-slabs/index.html">Quartz Slabs</a></li>
-          <li><a href="../../products/countertops/index.html">Countertops</a></li>
-          <li><a href="../../products/tiles-pavers/index.html">Tiles &amp; Pavers</a></li>
-          <li><a href="../../products/vanity-tops/index.html">Vanity Tops</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4 class="footer-col-title">Applications</h4>
-        <ul class="footer-links-list">
-          <li><a href="../../applications/index.html">Commercial</a></li>
-          <li><a href="../../applications/index.html">Multifamily</a></li>
-          <li><a href="../../applications/index.html">Hospitality</a></li>
-          <li><a href="../../applications/index.html">Residential</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -275,8 +261,6 @@
         <ul class="footer-links-list">
           <li><a href="../../catalogs/index.html">Catalogs</a></li>
           <li><a href="#">Care &amp; Maintenance</a></li>
-          <li><a href="#">Installation Guide</a></li>
-          <li><a href="#">FAQ</a></li>
         </ul>
       </div>
       <div class="footer-col">
